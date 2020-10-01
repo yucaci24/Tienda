@@ -15,6 +15,7 @@ steps:
     scannerMode: 'CLI'
     configMode: 'file'
 - task: Gradle@2
+  displayName: Gradle Build
   inputs:
     workingDirectory: ''
     gradleWrapperFile: 'gradlew'
@@ -27,6 +28,7 @@ steps:
     tasks: 'build'
     options: '-x test'
 - task: Gradle@2
+  displayName: Gradle Test
   inputs:
     gradleWrapperFile: 'gradlew'
     tasks: 'test'
